@@ -4,14 +4,14 @@ import "./VideoCard.less";
 
 const VideoCard = ({ title, description, contentPartner, img }) => (
   <Card className="card" bordered={false}>
-    <section className="header">
-      <h1 className="title">{title}</h1>
-      <p className="subtitle">By: {contentPartner}</p>
+    <section className="card__header">
+      <h1 className="card__title">{title}</h1>
+      <p className="card__subtitle">By: {contentPartner}</p>
     </section>
-    <section className="preview">
+    <section className="card__preview">
       <img src={img} />
     </section>
-    <section className="description">{description}</section>
+    <section className="card__description">{description}</section>
   </Card>
 );
 
