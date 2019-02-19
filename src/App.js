@@ -1,15 +1,8 @@
 import React from "react";
-import { Tabs, Layout } from "antd";
-import "./App.less";
+import { Layout } from "antd";
 import VideoCardContainer from "./components/videoCard/VideoCardContainer";
 
 const { Content } = Layout;
-
-const TabPane = Tabs.TabPane;
-
-function callback(key) {
-  console.log(key);
-}
 
 const App = () => (
   <Content>
