@@ -1,5 +1,7 @@
 import React from "react";
 import { Tabs, Layout } from "antd";
+import "./Tabs.less";
+
 const { Content } = Layout;
 
 const TabPane = Tabs.TabPane;

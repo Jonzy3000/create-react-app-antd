@@ -1,0 +1,23 @@
+.tabs {
+  @active-tab-color: #0051bc;
+  @inactive-tab-color: #c3d3f5;
+
+  .ant-tabs-bar {
+    margin: 0;
+    border-bottom: 0px;
+    color: @inactive-tab-color;
+  }
+
+  .ant-tabs-ink-bar {
+    background-color: @active-tab-color;
+    height: 4px;
+  }
+
+  .ant-tabs-tab-active.ant-tabs-tab {
+    color: @active-tab-color;
+  }
+
+  .ant-tabs-tab {
+    padding: 0px 16px 6px;
+  }
+}
