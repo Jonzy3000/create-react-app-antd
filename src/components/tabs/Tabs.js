@@ -17,16 +17,16 @@ const StyledTabs = styled(Tabs)`
   .ant-tabs-bar {
     margin: 0;
     border-bottom: 0px;
-    color: ${inactiveTabColor};
+    color: ${props => props.inactiveColor};
   }
 
   .ant-tabs-ink-bar {
-    background-color: ${activeTabColor};
+    background-color: ${props => props.activeColor};
     height: 4px;
   }
 
   .ant-tabs-tab-active.ant-tabs-tab {
-    color: ${activeTabColor};
+    color: ${props => props.activeColor};
   }
 
   .ant-tabs-tab {
@@ -36,7 +36,13 @@ const StyledTabs = styled(Tabs)`
 
 const TabsComponent = () => (
   <Content>
-    <StyledTabs className="tabs" defaultActiveKey="1" onChange={callback}>
+    <StyledTabs
+      inactiveColor="#c3d3f5"
+      activeColor="#0051bc"
+      className="tabs"
+      defaultActiveKey="1"
+      onChange={callback}
+    >
       <TabPane tab="Tab 1" key="1">
         Content of Tab Pane 1
       </TabPane>
