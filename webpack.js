@@ -35,7 +35,8 @@ module.exports = {
         use: {
           loader: "babel-loader",
           query: {
-            presets: ["react", "stage-3"]
+            presets: ["react", "stage-3"],
+            plugins: ["babel-plugin-styled-components"]
           }
         }
       },

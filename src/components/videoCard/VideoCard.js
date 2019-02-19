@@ -1,42 +1,43 @@
 import React from "react";
 import { Card } from "antd";
+import "./VideoCard.less";
+import styled from "styled-components";
 
-const styles = {
-  card: {
-    borderRadius: 8,
-    boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1)"
-  },
-  header: {
-    fontSize: 14,
-    color: "#b6c0e9",
-    fontWeight: "bold",
-    lineHeight: "24px",
-    marginBottom: 0
-  },
-  title: {
-    fontSize: 18,
-    color: "rgb(255, 159, 159)"
-  },
-  img: {
-    height: 100,
-    width: 204
-  },
-  description: {
-    marginTop: 45,
-    fontSize: 16
-  }
-};
+const Header = styled.section`
+  font-size: 14px;
+  color: #b6c0e9;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 0px;
+`;
+
+const Title = styled.h1`
+  font-size: 18px;
+  color: rgb(255, 159, 159);
+`;
+
+const Subtitle = styled.p``;
+
+const Img = styled.img`
+  height: 100px;
+  width: 204px;
+`;
+
+const Description = styled.section`
+  margin-top: 45px;
+  font-size: 16px;
+`;
 
 const VideoCard = ({ title, description, contentPartner, img }) => (
-  <Card style={styles.card} bordered={false}>
-    <section style={styles.header}>
-      <h1 style={styles.title}>{title}</h1>
-      <p style={styles.subtitle}>By: {contentPartner}</p>
+  <Card className="card" bordered={false}>
+    <Header>
+      <Title>{title}</Title>
+      <Subtitle>By: {contentPartner}</Subtitle>
+    </Header>
+    <section className="preview">
+      <Img src={img} />
     </section>
-    <section>
-      <img style={styles.img} src={img} />
-    </section>
-    <section style={styles.description}>{description}</section>
+    <Description className="description">{description}</Description>
   </Card>
 );
 
