@@ -3,6 +3,11 @@ import { Card } from "antd";
 import "./VideoCard.less";
 import styled from "styled-components";
 
+const StyledCard = styled(Card)`
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+`;
+
 const Header = styled.section`
   font-size: 14px;
   color: #b6c0e9;
@@ -29,7 +34,7 @@ const Description = styled.section`
 `;
 
 const VideoCard = ({ title, description, contentPartner, img }) => (
-  <Card className="card" bordered={false}>
+  <StyledCard className="card" bordered={false}>
     <Header>
       <Title>{title}</Title>
       <Subtitle>By: {contentPartner}</Subtitle>
@@ -38,7 +43,7 @@ const VideoCard = ({ title, description, contentPartner, img }) => (
       <Img src={img} />
     </section>
     <Description className="description">{description}</Description>
-  </Card>
+  </StyledCard>
 );
 
 export default VideoCard;
