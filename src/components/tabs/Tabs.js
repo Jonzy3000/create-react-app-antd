@@ -10,9 +10,6 @@ function callback(key) {
   console.log(key);
 }
 
-const inactiveTabColor = "#c3d3f5";
-const activeTabColor = "#0051bc";
-
 const StyledTabs = styled(Tabs)`
   .ant-tabs-bar {
     margin: 0;
